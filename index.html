@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио разработчика</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="./favicon.png" type="image/png" />
+  <link rel="icon" href="./favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand__label" id="brandLabel">Портфолио разработчика</div>
+        
+      </div>
+
+      <div class="developer-card">
+        <div class="developer-photo-preview" id="developerPhotoPreview">
+          <span>Фото</span>
+        </div>
+
+        <div class="developer-name" id="developerName">Имя Фамилия</div>
+        <div class="developer-bio" id="developerBio">Биография разработчика.</div>
+      </div>
+
+      <div class="themes-panel">
+        <div class="themes-panel__title" id="themesPanelTitle">Темы</div>
+        <div class="themes" id="themesList"></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <h2 id="currentThemeTitle">Выберите тему</h2>
+          <p id="currentThemeSubtitle">Проекты выбранной темы.</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 21l-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input id="searchInput" type="search" placeholder="Поиск по проектам..." />
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <b id="themeCount">0</b>
+            <span id="themeCountLabel">тем</span>
+          </div>
+          <div class="stat">
+            <b id="projectCount">0</b>
+            <span id="projectCountLabel">проектов в теме</span>
+          </div>
+        </div>
+      </div>
+
+      <section id="projectsContainer" class="projects"></section>
+    </main>
+  </div>
+
+  <script>
+    window.__PORTFOLIO_DATA__ = {"settings":{"language":"ru","bilingualMode":false},"developerProfile":{"name":"Даня Кивокурцев","bio":"Я люблю программировать. Я уже изучил Scratch, Roblox Studio и умею хорошо владеть компьютером, а также работать с нейросетями","photo":"covers/developer_profile.webp"},"themes":[{"id":"42cde170-6606-4370-9791-9d00477d16dc","name":"Компьютерная грамотность","createdAt":"2026-06-07T09:02:59.216Z","projects":[{"id":"24f7655f-edb6-4974-8fdf-f98887794595","title":"Работа в графическом редакторе","description":"Умею рисовать различные картинки в разных графических редакторах. К примеру, пиксель-арт","link":"","additional":"","cover":"covers/project_24f7655f-edb6-4974-8fdf-f98887794595.png","createdAt":"2026-06-07T09:28:32.351Z","updatedAt":"2026-06-07T09:28:32.351Z"},{"id":"70a016d8-e0e9-48ce-9e42-080e28bb726a","title":"Создание презентаций, документов и таблиц","description":"Я научился делать презентации, создавать табличные и текстовые документы. К примеру, презентация об игре Poppy Playtime","link":"https://disk.yandex.ru/i/Nqg03oJg3rdkTQ","additional":"","cover":"covers/project_70a016d8-e0e9-48ce-9e42-080e28bb726a.png","createdAt":"2026-06-07T09:31:49.410Z","updatedAt":"2026-06-07T09:31:49.410Z"},{"id":"3539d2ad-b8cd-4116-b636-ba7c8c8b7bb1","title":"Управление бюджетом","description":"Я узнал что такое деньги, как они зарабатываются и научился распределять бюджет, а также создал свою собственную валюту","link":"https://disk.yandex.ru/i/AUyZTgtO7H_mow","additional":"","cover":"covers/project_3539d2ad-b8cd-4116-b636-ba7c8c8b7bb1.png","createdAt":"2026-06-07T09:34:33.488Z","updatedAt":"2026-06-07T09:41:12.751Z"}]},{"id":"ef06b9f3-d265-4288-a96e-ae6efd116fc4","name":"Скретч","createdAt":"2026-06-07T09:40:23.291Z","projects":[{"id":"3e541b20-576c-42cc-b27e-c5c65771f6ae","title":"99 ночей в лесу","description":"Игра вдохновлена проектом «99 ночей в лесу» из Roblox. Основная задача: выжить в лесу, обороняясь от врагов. Это демо-версия игры, на данный момент реализовано:\n1-4 - взять инструмент из инвентаря.\n1 - топор (в будущем можно будет собирать дерево для постройки оборонительных сооружений)\n2 - фонарь (защита от врагов)\nПРОБЕЛ - освободить руки от инструмента. \n\nВраги боятся света, ночью необходимо обороняться от них.","link":"https://scratch.mit.edu/projects/1321220819","additional":"","cover":"covers/project_3e541b20-576c-42cc-b27e-c5c65771f6ae.png","createdAt":"2026-06-07T09:46:32.761Z","updatedAt":"2026-06-07T09:46:32.761Z"}]}]};
+    window.__PORTFOLIO_TRANSLATIONS__ = {"ru":{"pageTitle":"Портфолио разработчика","brandLabel":"Портфолио разработчика","themesTitle":"Темы","chooseTheme":"Выберите тему","chooseThemeSubtitle":"Проекты выбранной темы.","searchPlaceholder":"Поиск по проектам...","themesCountLabel":"тем","projectsCountLabel":"проектов в теме","projectsShortLabel":"проектов","developerNameFallback":"Имя Фамилия","developerBioFallback":"Биография разработчика.","developerPhotoFallback":"Фото","emptyThemesTitle":"Тем пока нет","emptyThemesDescription":"В этом портфолио пока нет проектов.","emptyNoSelectionTitle":"Нет тем","emptyNoSelectionDescription":"Добавьте хотя бы одну тему в админской части, затем экспортируйте сайт снова.","emptySearchTitle":"Ничего не найдено","emptySearchDescription":"Измените запрос поиска или выберите другую тему.","additionalLabel":"Дополнительно","openProject":"Открыть проект ↗"}};
+  </script>
+  <script src="./script.js"></script>
+</body>
+</html>
